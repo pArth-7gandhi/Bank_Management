@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register form</title>
+	<link rel="stylesheet"  href="register.css">
+</head>
+<body>
+	
+<div class="contain-box">
+
+		<h1>Register here</h1>
+		<form action="register.php" method="post">
+			
+				<div class="input-box">
+					<input type="name" name="c_name" placeholder="FULL NAME" required>
+					<input type="username" name="username" placeholder="Username" required>
+					<input type="email" name="email" placeholder="Enter your Email-id" required>
+					<input type="password" name="password" placeholder="Enter Password" required>
+					<input type="password" name="repassword" placeholder="Reenter Password" required>
+					<input type="text" name="ccity" placeholder="Enter City" required>
+					<input type="number" name="phone_no" placeholder="Mobile no:" required>
+					<input type="date" name="dob" placeholder="Date of birth  dd/mm/yy" required>
+					<!-- <input type="text" name="Account" placeholder="Type of Account" required> -->
+				</div>
+					<div class="dropdown">
+					  <button class="dropbtn" style="width:90%; height:40px">Account type</button>
+						  <div class="dropdown-content">
+						  	<select id="acctype" name="acctype" size="2">
+							  	<option value="savings">SAVINGS</option>
+					  			<option value="currrent">CURRENT</option>
+							</select>
+						  </div>
+					</div>
+
+
+					<input type="submit" name="" value="Register">	
+					<a href="login.html" style= "color:red">already a user?!</a>
+
+				
+				
+		</form>
+			
+	</div>
+
+</body>
+</html>

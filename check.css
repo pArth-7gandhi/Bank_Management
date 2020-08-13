@@ -1,0 +1,66 @@
+.login-button-container {
+  margin: 32px -15px;
+}
+
+.sign-in {
+ padding-left: 0;
+}
+
+.register {
+ padding-right: 0;
+}
+
+.sign-in__button,
+.register__button {
+  background-color: white;
+  border: 1px solid black;
+  display: block;
+  min-height: 60px;
+  width: 100%;
+  }
+ .sign-in__button,
+.register__button :hover {
+    background: none;
+    border: 1px solid #ccc;
+    color: green;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 3px solid orange !important;
+  }
+
+  &:active,
+  &.active {
+    background-color: #ccc;
+    border: 1px solid pink;
+    box-shadow: none;
+  }
+}
+
+.hidden_clip {
+  clip: rect(1px 1px 1px 1px); // IE6, IE7
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+
+.text-input__field {
+  border: 0;
+  display: block;
+  font-size: 16px;
+  height: 60px;
+  outline: 1px solid #ccc;
+  padding: 18px;
+  width: 100%;
+
+  &:focus,
+  &.focus {
+    outline: 3px solid orange;
+  }
+
+  &:active,
+  &.active {
+    outline: 1px solid black;
+  }
+}
+  

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register form</title>
+	<link rel="stylesheet"  href="staff_register.css">
+</head>
+<body>
+	
+<div class="contain-box">
+
+		<h1>Register here</h1>
+		<form action="staff_register.php" method="post">
+			
+				<div class="input-box">
+					<input type="name" name="ename" placeholder="FULL NAME" required>
+					<input type="username" name="username" placeholder="Username" required>
+					<input type="email" name="email" placeholder="Enter your Email-id" required>
+					<input type="password" name="password" placeholder="Enter Password" required>
+					<input type="password" name="repassword" placeholder="Reenter Password" required>
+					 <p>Please select Post:</p>
+					  <input type="radio"  name="post" value="Clerk">
+					  <label for="clerk" style="color:white">Clerk</label>
+					  <input type="radio" name="post" value="Assistant">
+					  <label for="assistant" style="color:white">Assistant</label>
+					  <input type="radio" name="post" value="Employee">
+					  <label for="employee" style="color:white">Employee</label>
+
+					<!-- <input type="text" name="post" placeholder="Enter Post" required> -->
+					<input type="text" name="branch_id" placeholder="Enter Branch id" required>
+					<input type="text" name="ecity" placeholder="Enter City" required>
+					<input type="number" name="ephone_no" placeholder="Mobile no:" required>
+					<!-- <input type="date" name="dob" placeholder="Date of birth  dd/mm/yy" required> -->
+					<!-- <input type="text" name="Account" placeholder="Type of Account" required> -->
+				</div>
+				<!-- 	<div class="dropdown">
+					  <button class="dropbtn" style="width:90%; height:40px">Account type</button>
+						  <div class="dropdown-content">
+						  	<select id="acctype" name="acctype" size="2">
+							  	<option value="savings">SAVINGS</option>
+					  			<option value="currrent">CURRENT</option>
+							</select>
+						  </div>
+					</div> -->
+
+					<input type="submit" name="" value="Register">	
+					<a href="login.html">already a user?!</a>
+
+		</form>
+			
+	</div>
+
+</body>
+</html>

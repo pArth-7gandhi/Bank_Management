@@ -1,0 +1,33 @@
+a: visited{
+	text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+a:hover {
+  text-decoration: underline;
+
+}
+
+a:active {
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+
+.Display{
+
+	display: inline-block;
+	padding: 100px 600px;
+    width: 400px;
+    font-weight: bold;
+}
+
+span{
+	font-size: 20px;
+}
+

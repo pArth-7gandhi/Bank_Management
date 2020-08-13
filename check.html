@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="check.css">
+ 
+</head>
+<body>
+ <script type="text/javascript">
+     $('.register__button').hide();
+
+ $('.sign-in__button').click(function(e) {
+   e.preventDefault();
+   $(this).addClass('active');
+   $('.register__button').removeClass('active');
+   $('.login__form').show();
+   $('.register__form').hide();
+   $('#edit-email').focus(); //Should appear after $('.login__form').show(); because if it's before that, the register form doesn't exist in the DOM
+ });
+
+ $('.register__button').click(function(e) {
+   e.preventDefault();
+   $(this).addClass('active');
+   $('.sign-in__button').removeClass('active');
+   $('.register__form').show();
+   $('.login__form').hide();
+   $('#edit-firstname').focus(); //Should appear after $('.register__form').show(); because if it's before that, the register form doesn't exist in the DOM
+ });
+  </script>
+  <div class="container">
+
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+    <div class="login-button-container clearfix">
+
+      <div class="col-xs-6 sign-in">
+        <button class="btn sign-in__button active">
+          Sign in        
+        </button>
+      </div>
+
+      <div class="col-xs-6 register">
+        <button class="btn register__button">
+          Register        
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+
+    <div class="row login__form" style="display: block;">
+      <form action="/auth" method="post" accept-charset="UTF-8">
+        <div>
+          <fieldset class="form__fieldset required form__login">
+            <legend class="form__legend--subtitle">
+              Sign in using email </legend>
+
+            <div class="form__field__wrapper form-item"> <label for="edit-email" class="text-input__label">Email address <span class="form-required" aria-hidden="true" title="This field is required.">*</span><span class="hidden_clip">a required field.</span></label>
+              <input class="form-control form-text required text-input__field" type="text" id="edit-email" name="email" value="" size="60" maxlength="128" aria-required="true" aria-describedby="edit-email-descriptor">
+            </div>
+            <div class="form__field__wrapper form-item"> <label for="edit-password" class="text-input__label">Password <span class="form-required" aria-hidden="true" title="This field is required.">*</span><span class="hidden_clip">a required field.</span></label>
+              <input class="form-control form-text password__field text-input__field required" type="password" id="edit-password" name="password" size="60" maxlength="128" aria-required="true">
+            </div>
+          </fieldset>
+          <button class="inpt-btn btn btn-primary form-submit js-registerSubmit" type="submit" id="edit-submit" value="Register">Sig in</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="row register__form" style="display: none;">
+      <div id="registration-form-wrapper">
+        <form action="/auth" method="post" accept-charset="UTF-8">
+          <div>
+            <div class="form__register">
+
+
+              <div class="clearfix"></div>
+
+              <div class="divide-width">
+                <div class="middle-bottom-inner-left">
+                  <div class="form__field__wrapper form-item"> <label for="edit-firstname" class="text-input__label">First Name <span class="form-required" aria-hidden="true" title="This field is required.">*</span><span class="hidden_clip">a required field.</span></label>
+                    <input placeholder="First name" class="form-control form-text required text-input__field" type="text" id="edit-firstname" name="firstname" value="" size="60" maxlength="128" aria-required="true" aria-describedby="edit-firstname-descriptor">
+                  </div>
+                </div>
+              </div>
+              <div class="divide-width divide-mrgn">
+                <div class="middle-bottom-inner-left">
+                  <div class="form__field__wrapper form-item"> <label for="edit-lastname" class="input__label">Last Name <span class="form-required" aria-hidden="true" title="This field is required.">*</span><span class="hidden_clip">a required field.</span></label>
+                    <input placeholder="Last name" class="form-control form-text required text-input__field" type="text" id="edit-lastname" name="lastname" value="" size="60" maxlength="128" aria-required="true" aria-describedby="edit-lastname-descriptor">
+                  </div>
+                </div>
+              </div>
+              <div class="middle-bottom-inner-left">
+                <div class="form__field__wrapper form-item"> <label for="edit-email--2" class="input__label">Email Address <span class="form-required" aria-hidden="true" title="This field is required.">*</span><span class="hidden_clip">a required field.</span></label>
+                  <input placeholder="Enter your email address" class="form-control form-text required text-input__field" type="text" id="edit-email--2" name="email" value="" size="60" maxlength="128" aria-required="true" aria-describedby="edit-email--2-descriptor">
+                </div>
+              </div>
+
+              <div class="middle-bottom-inner-left-pass">
+                <div class="form-type-password form-item-password form-item form-group" id="display-second-part">
+                  <div class="form__field__wrapper form-item"> <label for="edit-password--2" class="text-input__label">Password </label>
+                    <input class="form-group form-control form-text password__field text-input__field" placeholder="Create a password" data-edit-password="true" type="password" id="edit-password--2" name="password" size="60" maxlength="128"> <span class="field-suffix"><span id="passwordval"></span></span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <button class="inpt-btn btn btn-primary form-submit js-registerSubmit" type="submit" id="edit-submit--2" name="op" value="Register">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+</body>
+</html>
+
+
